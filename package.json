@@ -1,41 +1,45 @@
 {
-  "name": "generator-qs",
-  "version": "0.0.0",
-  "description": "A generator for Yeoman",
-  "keywords": [
-    "yeoman-generator"
-  ],
-  "homepage": "https://github.com/warmrobot/generator-qs",
-  "bugs": "https://github.com/warmrobot/generator-qs/issues",
-  "author": {
-    "name": "Igor Frolov",
-    "email": "igorfrolov.igorfrolov.info",
-    "url": "https://github.com/warmrobot"
-  },
-  "main": "app/index.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/warmrobot/generator-qs.git"
-  },
-  "scripts": {
-    "test": "mocha"
-  },
-  "dependencies": {
-    "yeoman-generator": "~0.13.0"
-  },
-  "devDependencies": {
-    "mocha": "~1.12.0"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0"
-  },
-  "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.2.10"
-  },
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ]
+	"name": "generator-qs",
+	"version": "0.0.1",
+	"description": "An Yeoman generator with Jade, Stylus, ImageOptim, watchers and Connect.",
+	"keywords": [
+		"yeoman-generator",
+	    "stylus",
+		"jade",
+		"watch",
+		"connect"
+	],
+	"homepage": "https://github.com/warmrobot/generator-qs",
+	"bugs": "https://github.com/warmrobot/generator-qs/issues",
+	"author": {
+		"name": "Igor Frolov",
+		"email": "igorfrolov.igorfrolov.info",
+		"url": "https://github.com/warmrobot"
+	},
+	"main": "app/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/warmrobot/generator-qs.git"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"dependencies": {
+		"yeoman-generator": "~0.13.0"
+	},
+	"devDependencies": {
+		"mocha": "~1.12.0"
+	},
+	"peerDependencies": {
+		"yo": ">=1.0.0"
+	},
+	"engines": {
+		"node": ">=0.8.0",
+		"npm": ">=1.2.10"
+	},
+	"licenses": [
+		{
+			"type": "MIT"
+		}
+	]
 }
