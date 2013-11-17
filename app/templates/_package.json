@@ -3,10 +3,6 @@
 	"version": "0.0.1",
 	"description": "HTML and CSS new Project",
 	"main": "Gruntfile.js",
-	"repository": {
-		"type": "git",
-		"url": ""
-	},
 	"keywords": [
 		"CSS",
 		"HTML"
