@@ -1,7 +1,7 @@
 {
 	"name": "generator-qs",
 	"version": "0.0.1",
-	"description": "An Yeoman generator with Jade, Stylus, ImageOptim, watchers and Connect.",
+	"description": "An Yeoman generator with Jade, Stylus, image optimization, watchers and node server preview.",
 	"keywords": [
 		"yeoman-generator",
 	    "stylus",
