@@ -20,6 +20,9 @@ QsGenerator.prototype.app = function app() {
 	this.mkdir( 'src' );
 	this.mkdir( 'build' );
 
+	this.directory( 'jade', 'src' );
+	this.copy( 'favicon.ico', 'src/favicon.ico' );
+
 	this.copy( '_package.json', 'package.json' );
 	this.copy( '_bower.json', 'bower.json' );
 	this.copy( '_Gruntfile.js', 'Gruntfile.js' );
