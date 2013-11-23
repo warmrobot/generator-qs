@@ -2,7 +2,7 @@ module.exports = function ( grunt ) {
 	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'build' ]);
-	grunt.registerTask( 'build', [ 'jade', 'stylus', 'imagemin', 'copy' ]);
+	grunt.registerTask( 'build', [ 'jade', 'cssmin:normalize', 'stylus', 'imagemin', 'copy' ]);
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON( 'package.json' ),
@@ -34,6 +34,14 @@ module.exports = function ( grunt ) {
 					src: '**',
 					dest: '<%= dest %>js/'
 				}]
+			}
+		},
+
+		cssmin: {
+			normalize: {
+				files: {
+					'<%= src %>styl/normalize.css': 'bower_components/normalize-css/normalize.css'
+				}
 			}
 		},
 
@@ -77,8 +85,8 @@ module.exports = function ( grunt ) {
 					'include css': true
 				},
 				files: {
-					'<%= dest %>css/main.css': '<%= src %>styl/main.styl',
-					'<%= dest %>css/main-ie.css': '<%= src %>styl/main-ie.styl'
+					'<%= dest %>css/style.css': '<%= src %>styl/style.styl',
+					'<%= dest %>css/style-ie.css': '<%= src %>styl/style-ie.styl'
 				}
 			}
 		},

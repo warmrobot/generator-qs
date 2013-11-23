@@ -1,0 +1,76 @@
+hex(num)
+	return base-convert(round(num), 16)
+
+argb(color){
+	return s('#%s%s%s%s', hex(alpha(color) * 255), hex(red(color)), hex(green(color)), hex(blue(color)))
+}
+
+percentage()
+	if arguments[1]
+		unit(round(arguments[0]*100, arguments[1]), '%')
+	else
+		unit(arguments[0]*100, '%')
+
+// rem mixin
+if $font-size-base is defined
+	font-size(n)
+		if unit(n) is 'rem'
+			font-size: round(remove-unit(n) * $font-size-base) if ie
+			font-size: n
+		else
+			font-size: n
+
+	line-height(n)
+		if unit(n) is 'rem'
+			line-height: round(remove-unit(n) * $font-size-base)
+			line-height: n
+		else
+			line-height: n
+
+// Приводим lihe-height к значению без единиц измерения и округляем до тысячных
+lineHeight(lh, r=3)
+	curUnit = unit(lh)
+	if (curUnit == 'em' or curUnit == '')
+		line-height round(unit(lh, ''), r)
+	else
+		line-height lh
+
+// Single side border-radius
+border-top-radius(radius) {
+	border-top-right-radius: radius;
+	border-top-left-radius: radius;
+}
+border-right-radius(radius) {
+	border-bottom-right-radius: radius;
+	border-top-right-radius: radius;
+}
+border-bottom-radius(radius) {
+	border-bottom-right-radius: radius;
+	border-bottom-left-radius: radius;
+}
+border-left-radius(radius) {
+	border-bottom-left-radius: radius;
+	border-top-left-radius: radius;
+}
+
+
+vGradient()
+	background: linear-gradient(arguments[0], arguments[1], arguments[2])
+	filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=%s,endColorstr=%s,GradientType=0)' % (argb(arguments[1]) argb(arguments[2]))
+
+reset-filter()
+	filter: 'progid:DXImageTransform.Microsoft.gradient(enabled = false)'
+
+.text-hide()
+	font unquote("0/0") a
+	color transparent
+	text-shadow none
+	background-color transparent
+	border 0
+
+// Responsive image
+// Keep images from scaling beyond the width of their parents.
+img-responsive($display = block)
+	display: $display;
+	max-width: 100%; // Part 1: Set a maximum relative to the parent
+	height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching

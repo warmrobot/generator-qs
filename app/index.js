@@ -32,6 +32,7 @@ QsGenerator.prototype.app = function app() {
 
 	this.mkdir( 'src/js' );
 	this.mkdir( 'build/js' );
+	this.mkdir( 'build/js/vendor' );
 
 	this.mkdir( 'src/styl' );
 	this.mkdir( 'build/css' );
