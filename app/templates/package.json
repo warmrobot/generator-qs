@@ -1,0 +1,27 @@
+{
+	"name": "generator-qs-playground",
+	"version": "1.0.0",
+	"description": "HTML and CSS new Project",
+	"main": "Gruntfile.js",
+	"keywords": [
+		"CSS",
+		"HTML"
+	],
+	"license": "BSD",
+	"author": "Igor Frolov (imfrolov@gmail.com)",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "*",
+		"grunt-contrib-concat": "*",
+		"grunt-contrib-connect": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-imagemin": "*",
+		"grunt-contrib-jade": "*",
+		"grunt-contrib-stylus": "*",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-watch": "*",
+		"grunt-sass": "*",
+		"grunt-postcss" : "*",
+		"load-grunt-tasks": "*"
+	}
+}

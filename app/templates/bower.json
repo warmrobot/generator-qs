@@ -1,0 +1,20 @@
+{
+	"name": "generator-qs",
+	"version": "0.2.0",
+	"authors": [
+		"Igor Frolov <imfrolov@gmail.com>"
+	],
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"normalize-css": "3.0.2",
+		"jquery": "2.1.1"
+	}
+}
