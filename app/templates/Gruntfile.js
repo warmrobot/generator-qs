@@ -22,12 +22,14 @@ module.exports = function (grunt) {
 
 		copy: {
 			all: {
-				files: [
-					{
+				files: [{
 						expand: true,
 						cwd: '<%= src %>js/',
 						src: '**',
 						dest: '<%= dest %>js/'
+					}, {
+						src: '<%= src %>favicon.ico',
+						dest: '<%= dest %>favicon.ico'
 					}
 				]
 			}
